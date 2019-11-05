@@ -49,10 +49,10 @@ if(question8 == "b"){
 		score = 2;
 	}else if (correct > 0 && correct < 5) {
 		score = 1;
+	}else if (correct > 4 && correct < 8){
+		score = 3;
 	}else if (correct == 8) {
 		score = 0;
-	}else if (correct == 5 && correct <8){
-		score = 3;
 	}
 
 	document.getElementById("after_btn").style.visibility = "visible";
