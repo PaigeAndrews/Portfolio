@@ -1,3 +1,11 @@
+/// <reference path="..typings/globals/jquery/index.d.ts" />
+$(document).ready(function()){
+    $("p").click(fuction()){
+        $(this).hide();
+    });
+});
+
+
 // var winHeight = $(window).innerHeight();
 // $(document).ready(function () {
 //     $(".panel").height(winHeight);
@@ -10,13 +18,6 @@
 // $(window).on('scroll',function(){
 //     $(".panelCon").css('bottom',$(window).scrollTop()*-1);
 // });
-
-    window.scroll(0, document.documentElement.scrollHeight)
-
-// addEventListener(window.onLoad(), function(){
-//     window.scroll(0, document.documentElement.scrollHeight)
-// })
-//  window.scroll(0, document.documentElement.scrollHeight)
-//   document.onload = function() {
-//         window.scroll(0, document.documentElement.scrollHeight)
-//     }
+function scrollBottom() {window.scrollTo(0, 99999);}
+if (document.addEventListener) document.addEventListener("DOMContentLoaded", scrollBottom, false)
+else if (window.attachEvent) window.attachEvent("onload", scrollBottom);
