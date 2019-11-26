@@ -1,0 +1,243 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body{ 
+      width: 100%;
+      height: 100%;
+      margin:0;
+      font-family: arial;
+  
+  }
+  
+  .zone{
+      /* padding:30px 50px;
+      margin: 40px 60px; */
+      /* cursor:pointer; */
+      /* display: inline-block; */
+      color: #FFF;
+      font-size: 2em;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+  /*     transition: all 0.3s linear; */
+    
+  
+  }
+ 
+  /* .zone:hover {
+  box-shadow: rgba (0,0,0,0.8) 0px 5px 15px, inset
+  }
+  
+  .box:hover{
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  } */
+  
+  .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+  }
+  
+  .main-nav {
+      display: flex;
+      list-style: none;
+      font-size: 0.7em;
+      margin: 0;
+      z-index: 50;
+     width: 100%;
+  }
+  
+  @media only screen and (max-width: 600px){
+      .main-nav{
+          font-size: 0.5em;
+          padding: 0;
+      }
+  }
+  li { 
+      padding: 20px;
+  }
+  
+  a{ color: #f5f5f6;
+  text-decoration: none;
+  }
+  
+  .container{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+  }
+  
+  .cover{
+      width:18rem;
+  }
+  
+  .push{
+      margin-left: 50%;
+  }
+  
+  .grid-wrapper{
+    /* margin-top: 8%; */
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
+      padding: 30px;
+     width: 100%;
+     height:auto;
+     /* object-fit:contain; */
+  }
+
+  .third_container{
+      width: 100%;
+      height:auto;
+  }
+  
+  .icon{
+    border-radius: 50%;
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:297.66px;
+      min-height: 50px;
+    width: auto;
+    /* object-fit:contain; */
+  }
+  
+
+  .box > img {
+      width: 100%;
+      /* min-width: 30%; */
+      /* object-fit:contain; */
+  }
+  
+  .box{
+      font-size: 25px;
+    text-align: center;
+    object-fit:contain;
+    padding-right: 52px;
+  }
+  
+  footer{
+    display:fixed;
+      text-align: left;
+    font-size: 5px;
+    padding-left: 2%;
+    width: 100%;
+  }
+  
+  h1{
+    font-size: 25px;
+    margin:0;
+    padding-top: 3%;
+  }
+  
+  p{
+    font-size:18px;
+  }
+  .green{
+      background: linear-gradient(#53af62 ,#87bb4c);
+  }
+  
+  .red{
+      background: linear-gradient(#eb311f ,#b9052b);
+  }
+  
+  .blue{
+      background: linear-gradient(#69aaf1 ,#4591e8);
+  }
+  
+  .yellow{
+      background: linear-gradient(#e99e8c ,#ecb93b);
+  }
+  
+  
+  #design {
+      /* position: relative;  */
+    width: 200px; 
+    height: 200px;
+      margin: auto; 
+    margin-top: 12%;	
+   min-height: 70px;
+   min-width: 70px;
+  }
+  
+  #designImageContainer{
+      width: 100%;
+     /* height: 100%; */
+  }
+  
+  /* img tag doesn't suppert before and after so we use div instead */
+  /* #design {
+      position: relative; width: 300px; height: 300px;
+      margin: auto; margin-top: 100px;	
+  } */
+  
+  /* img tag doesn't support before and after so we use div instead */
+  .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      
+      background: url(https://images.unsplash.com/photo-1511692277506-3be3a7ab1686?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80tps://cdn.pixabay.com/photo/2019/10/13/11/24/ibis-4545853_960_720.jpg);
+      background-size: 100%;
+  
+      box-shadow: 0 0 20px #bac3c3;
+  }
+  
+  .image:before,
+  .image:after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-top: 15px #eb311f solid;
+      border-bottom: 15px #eb311f solid;
+      box-sizing: border-box;
+      filter: drop-shadow(0 0 10px #eb311f);
+      transition: 2s ease-in-out;
+  }
+  
+  .image:before {
+      transform: rotate(-45deg);
+      z-index: -1;
+  }
+  .image:after {
+      transform: rotate(45deg);
+      z-index: 1;
+    
+  }
+  
+  /* Add rotating effect because we can */
+  .image:hover:before {
+      transform: rotate(315deg);
+  }
+  .image:hover:after {
+      transform: rotate(405deg);
+  }
+  
+  .logo{
+    color: #4591e8;
+    font-size: 60px;
+    margin: 0;
+    /* display: inline; */
+    /* vertical-align: middle; 
+    line-height: 90px;   */
+    float: left;
+    /* line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle; */
+}
+
+.logo2{
+    color: #4591e8;
+    font-size: 60px; 
+    padding-left:10%; 
+    margin:0;
+    display: inline;
+    float: right;
+}
+  
