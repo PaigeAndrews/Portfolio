@@ -1,10 +1,10 @@
- body {
+ /* body {
   margin: 0;
     padding: 0;
     width: 100%;
     height: auto;
-    background-color: #555;
-}
+    background-color: grey;
+} */
 
 /* 
 .icon-bar {
@@ -18,14 +18,28 @@
   display: block;
 } */
 
+
+body {
+  background: linear-gradient(132deg, #dee2e1, #cde2f1);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 30s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
 .icon-bar {
-  width: 90px;
+  width: 8vw;
   height: 100%;
-  background-color: #555;
+  /* background-color: #555; */
   justify-content: center;
   position: fixed;
   z-index: 300;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: block;
 }
 
@@ -43,12 +57,13 @@
   text-align: center;
   padding: 16px;
   transition: all 0.3s ease;
-  color: white;
+  color: black;
   font-size: 36px;
+  text-decoration: none;
 }
 
 .icon-bar a:hover {
-  background-color: #000;
+  background-color: lightblue;
 }
 
 .active{
@@ -65,6 +80,11 @@
  visibility: hidden;
  font-size: 15px;
  padding: 0;
+}
+
+.skillsIcon{
+  height: 5vh;
+  width: auto;
 }
 
 .activeProfile:hover  .text {
@@ -84,15 +104,46 @@
   width: 100%;
 }
 
+@media screen and (max-width:243px){
+  .skillsIcon {
+    height: 2vh;
+    width: auto;
+  }
+  .activeProfile .text{
+    font-size: 4px;
+  }
+  .icon-bar a {
+    padding: 3px;
+}
+}
 
+@media screen and (max-width:343px){
+  .skillsIcon {
+    height: 3vh;
+    width: auto;
+  }
+  .activeProfile .text{
+    font-size: 8px;
+  }
+}
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) and (orientation: portrait){
   .icon-bar {
+    /* top: 0;  */
     width: 100%;
     height: 90px;
-    display: inline;
+  }
+
+  .icon-bar a{
+    float: left;
+  
   }
   .vertical-center{
-    display: inline;
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .activeProfile .text{
+    visibility: visible;
   }
 }
