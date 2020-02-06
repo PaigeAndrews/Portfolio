@@ -5,6 +5,8 @@ body {
   background: linear-gradient(132deg, #080f5e, #522499, black, #62056a, black);
   background-size: 400% 400%;
   animation: BackgroundGradient 30s ease infinite;
+  font-family: 'Syncopate', sans-serif;
+
 }
 
 @keyframes BackgroundGradient {
@@ -24,6 +26,8 @@ body {
   background-size: cover;
 }
 
+
+
 .icon-bar {
   width: 8vw;
   height: 100%;
@@ -37,10 +41,10 @@ body {
 
 .vertical-center {
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+   -ms-transform: translateY(-50%); 
+  transform: translateY(-50%); 
 }
 
 
@@ -72,6 +76,7 @@ body {
  left:0px;
  visibility: hidden;
  font-size: 15px;
+ /* font-size: 1rem; */
  padding: 0;
 }
 
@@ -95,31 +100,32 @@ body {
   text-align: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  /* top: 40%; */
+  /* position: absolute; */
+  /* display: inline-block; */
 }
 
-h1, p{
-  display:block;
-}
+
 
 .headerPaigeIcon{
   display: block;
   border-radius: 50%;
-  width: 20%;
+  width: 15%;
   height: auto;
   top: 10%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+  left: 40%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
   position: absolute;
   border-width:5px;  
   border-style:double;
   -webkit-animation: smooth 5s ease-in;
-    -moz-animation: smooth 5s ease-in;
-    -o-animation: smooth 5s ease-in;
-    -ms-animation: smooth 5s ease-in;
-    animation: smooth 5s ease-in-out infinite 5s;
-    
+  -moz-animation: smooth 5s ease-in;
+  -o-animation: smooth 5s ease-in;
+  -ms-animation: smooth 5s ease-in;
+  animation: smooth 5s ease-in-out infinite 5s;
+  
 }
 
 @-webkit-keyframes smooth {
@@ -128,45 +134,44 @@ h1, p{
   100% { opacity: 1;}
 }
 
+h1, p{
+  /* display: block; */
+  color: white;
+  
+}
+
+.socialIcons{
+  padding: 3px;
+  width: 2%;
+  height: auto;
+}
+
 .panel-footer {
 	background-color: rgba(0 ,0 ,0, 0.8);
-  /* margin-bottom: 0px; */
 	color: rgba(255, 255,255, 0.7);
   font-size: 12px;
   text-align: center;
    position: fixed;
-  /* left: 0; */
   bottom: 0;
   width: 100%;
 }
 
-@media screen and (max-width:243px){
-  .skillsIcon {
-    height: 2vh;
-    width: auto;
-  }
-  .activeProfile .text{
-    font-size: 4px;
-  }
-  .icon-bar a {
-    padding: 3px;
-}
-}
 
-@media screen and (max-width:343px){
-  .skillsIcon {
-    height: 3vh;
-    width: auto;
-  }
-  
-  .activeProfile .text{
-    font-size: 8px;
+
+
+@media screen and (max-width:1024px){
+  .headerPaigeIcon{
+    width: 19%;
+    height: auto;
+    top: 20%;
+    left: 40%;
   }
 }
 
-@media screen and (max-width:768px) and (orientation: portrait){
+
+
+@media screen and (max-width:768px){
   .icon-bar {
-    /* top: 0;  */
     width: 100%;
     height: 90px;
   }
@@ -177,10 +182,41 @@ h1, p{
   }
   .vertical-center{
     display: inline-block;
-    justify-content: center;
+    top: 3%;
+    -ms-transform: none; 
+    transform: none;
   }
 
+  a{
+    padding:0;
+  }
   .activeProfile .text{
     visibility: visible;
+    font-size: 11px;
   }
+  .skillsIcon{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:414px){
+  
+   .activeProfile .text{
+    font-size: 8px;
+    margin-top: 2%;
+  }
+
+  
+}
+
+
+@media screen and (max-width:320px){
+  
+  .activeProfile .text{
+    font-size: 8px;
+  }
+  .icon-bar a {
+    padding: 4px;
+}
 }
