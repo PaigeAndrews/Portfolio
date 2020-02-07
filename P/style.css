@@ -1,12 +1,13 @@
 
 
 body {
-  
-  background: linear-gradient(132deg, #080f5e, #522499, black, #62056a, black);
+  margin: 0;
+  background: linear-gradient(132deg, #080f5e, #522499, rgb(6, 5, 49), #62056a, rgb(54, 1, 1), rgb(16, 4, 43)
+  );
   background-size: 400% 400%;
   animation: BackgroundGradient 30s ease infinite;
   font-family: 'Syncopate', sans-serif;
-
+  color: white;
 }
 
 @keyframes BackgroundGradient {
@@ -37,6 +38,7 @@ body {
   z-index: 300;
   /* overflow: hidden; */
   display: block;
+  margin-right: 10px;
 }
 
 .vertical-center {
@@ -59,7 +61,7 @@ body {
 }
 
 .icon-bar a:hover {
-  background-color: lightblue;
+  background-color:rgba(44, 27, 75, 0.7);
   border-radius: 10px;
 }
 
@@ -97,10 +99,12 @@ body {
 }
 
 .headerMeContainer{
+  display: block;
   text-align: center;
   justify-content: center;
   width: 100%;
   height: auto;
+  padding-top: 20vh;
   /* top: 40%; */
   /* position: absolute; */
   /* display: inline-block; */
@@ -111,33 +115,38 @@ body {
 .headerPaigeIcon{
   display: block;
   border-radius: 50%;
-  width: 15%;
+  width: 15vw;
+  max-width: 205px;
   height: auto;
   top: 10%;
-  left: 40%;
+  left: 40vw;
+  
   /* margin-top: -50px;
   margin-left: -100px; */
-  position: absolute;
+  position: relative;
   border-width:5px;  
   border-style:double;
-  -webkit-animation: smooth 5s ease-in;
+ 
+  /* -webkit-animation: smooth 5s ease-in;
   -moz-animation: smooth 5s ease-in;
   -o-animation: smooth 5s ease-in;
   -ms-animation: smooth 5s ease-in;
-  animation: smooth 5s ease-in-out infinite 5s;
+  animation: smooth 5s ease-in-out infinite 5s; */
   
 }
 
-@-webkit-keyframes smooth {
+/* @-webkit-keyframes smooth {
   50% { opacity: .5;}
   /* 0% { opacity: 0;} */
-  100% { opacity: 1;}
+  /* 100% { opacity: 1;}
+} */ 
+
+h1{
+font-size: 3vw;
 }
 
-h1, p{
-  /* display: block; */
-  color: white;
-  
+p{
+  font-size: 1.7vw;
 }
 
 .socialIcons{
@@ -159,21 +168,28 @@ h1, p{
 
 
 
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
   .headerPaigeIcon{
     width: 19%;
     height: auto;
     top: 20%;
     left: 40%;
   }
+} */
+
+@media screen and (min-width:1300px){
+  .headerPaigeIcon{
+    left: 43vw;
+  }
 }
 
-
-
-@media screen and (max-width:768px){
+@media screen and (max-width:930px){
   .icon-bar {
+    margin: 0;
     width: 100%;
-    height: 90px;
+    height: 8vh;
+    background-color: rgba(0 ,0 ,0, 0.8);
+    padding-bottom: 3%;
   }
 
   .icon-bar a{
@@ -197,6 +213,7 @@ h1, p{
   .skillsIcon{
     display: none;
   }
+  
 }
 
 
@@ -206,7 +223,9 @@ h1, p{
     font-size: 8px;
     margin-top: 2%;
   }
-
+  .headerPaigeIcon{
+    width: 20vw;
+  }
   
 }
 
@@ -215,8 +234,10 @@ h1, p{
   
   .activeProfile .text{
     font-size: 8px;
+    padding-top: 5%;
   }
   .icon-bar a {
-    padding: 4px;
+    padding: 4px;  
 }
+
 }
