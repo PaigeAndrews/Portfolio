@@ -19,8 +19,9 @@ body {
 .container{
   z-index: 1000;
   width: 100%;
-  height: 1000px;
-  background-image: url("images/stars.png");
+  /* height: 1000px; */
+  height: 2500px;
+  background-image: url("images/stars2.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -151,19 +152,50 @@ p{
 
 .socialIcons{
   padding: 3px;
-  width: 2%;
+  width: 3%;
   height: auto;
 }
 
-.panel-footer {
-	background-color: rgba(0 ,0 ,0, 0.8);
-	color: rgba(255, 255,255, 0.7);
-  font-size: 12px;
-  text-align: center;
-   position: fixed;
-  bottom: 0;
-  width: 100%;
+.lineDivider{
+  border: 1px solid white;
+  width: 40%;
+  margin-top: 4%;
+  margin-bottom: 10%;
 }
+/* 
+.s{
+justify-content: center;
+width: 100%;
+  height: 60vh;
+} */
+.skillsContainer{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 100vw; */
+  height: 60vh;
+  text-align: center;
+  padding-left: 11vw;
+  padding-bottom: 0;
+  overflow-x: hidden;
+}
+
+
+.item {
+  /* display: inline; */
+  width: 15vw;
+  height: 4vh;
+  margin: 15px;
+  /* padding-top: 75px; */
+  background: none;
+  text-align: center;
+  float:bottom;
+  color: #FFF;
+  font-size: 1.7vw;
+  border-color: white;
+  border-style: none none solid solid;
+}
+
 
 
 
@@ -177,9 +209,15 @@ p{
   }
 } */
 
-@media screen and (min-width:1300px){
-  .headerPaigeIcon{
+@media screen and (min-width:1800px){
+  /* .headerPaigeIcon{
     left: 43vw;
+  } */
+  h1{
+font-size: 55px;
+  }
+  p{
+    font-size: 31px;
   }
 }
 
